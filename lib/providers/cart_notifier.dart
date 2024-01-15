@@ -2,8 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider_tutorial/models/product.dart';
 
 final cartNotifierProvider =
-    StateNotifierProvider<CartNotifier, List<Product>>(
-        (ref) => CartNotifier());
+    StateNotifierProvider<CartNotifier, List<Product>>((ref) => CartNotifier());
 
 class CartNotifier extends StateNotifier<List<Product>> {
   CartNotifier() : super([]);

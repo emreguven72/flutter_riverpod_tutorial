@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:provider_tutorial/providers/cart_notifier.dart';
 import 'package:provider_tutorial/views/all_products_view.dart';
+import 'package:provider_tutorial/views/animation_with_state_view.dart';
 import 'package:provider_tutorial/views/change_notifier_provider_view.dart';
+import 'package:provider_tutorial/views/deneme_view.dart';
 import 'package:provider_tutorial/views/future_provider_view.dart';
 import 'package:provider_tutorial/views/provider_view.dart';
 import 'package:provider_tutorial/views/counter_view.dart';
@@ -117,6 +119,22 @@ class MyHomePage extends ConsumerWidget {
               );
             },
             child: const Text("All Products"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const DenemeView()),
+              );
+            },
+            child: const Text("Deneme"),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AnimationView()),
+              );
+            },
+            child: const Text("Animation View"),
           ),
           ],
         )));
